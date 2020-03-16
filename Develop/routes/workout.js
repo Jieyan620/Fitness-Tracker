@@ -1,3 +1,8 @@
+const router = require('express').Router()
+const db = require('../models')
+
+
+
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
@@ -82,3 +87,5 @@ function renderNoWorkoutText() {
 }
 
 initWorkout();
+
+module.exports = router
